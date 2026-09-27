@@ -1,0 +1,251 @@
+{
+  "info": {
+    "_postman_id": "20ef95e5-a6b1-4aeb-8cc7-7f7606220ccc",
+    "name": "Operation Golden Keyboard API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58548280",
+    "_collection_link": "https://go.postman.co/collection/58548280-20ef95e5-a6b1-4aeb-8cc7-7f7606220ccc?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Participant edits another's mission (fails)",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "Test@1234",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "test_2",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"status\": \"cracked\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/missions/{{mission_id}}/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "missions",
+            "{{mission_id}}",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cant edit points",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "test_2",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "Test@1234",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"status\": \"cracked\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/missions/{{mission_id}}/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "missions",
+            "{{mission_id}}",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit points by user",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "RishabhDahiya",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "Rish@2006",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"points\": 999}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/missions/4/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "missions",
+            "4",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Claim available mission (success)",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "test_2",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "Test@1234",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/missions/4/claim/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "missions",
+            "4",
+            "claim",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Repeated claims",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "test_2",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "Test@1234",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/missions/4/claim/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "missions",
+            "4",
+            "claim",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Claim available mission (success) Again",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "test_2",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "Test@1234",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/missions/4/claim/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "missions",
+            "4",
+            "claim",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
